@@ -1,12 +1,14 @@
 package co.tiagoaguiar.fitnesstracker.model
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.Date
 
 @Entity
 data class Calc(
-    val id: Int,
-    val type: String,
-    val res: Double,
-    val createDate: Date
+    @PrimaryKey(autoGenerate = true)val id: Int,
+    @ColumnInfo(name = "type") val type: String,
+    @ColumnInfo(name = "res") val res: Double,
+    @ColumnInfo(name = "create_date") val createDate: Date = Date()
 )
