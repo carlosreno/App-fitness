@@ -17,6 +17,7 @@ import kotlin.math.log
 class MainActivity : AppCompatActivity() {
     private lateinit var bntImg: LinearLayout
     private lateinit var rvMain: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
                 MainItem(3, R.drawable.baseline_wb_sunny_24, R.string.calculo_IG, Color.GREEN),
                 MainItem(4, R.drawable.baseline_wc_24, R.string.imc, Color.CYAN)
             )
-
         )
         val adapter = MainAdapter(mainItems){id->
             when(id){
