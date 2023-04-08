@@ -48,9 +48,7 @@ class ImcActivity : AppCompatActivity() {
                         val dao = app.db.calcDao()
                         dao.insert(Calc(type = "imc",res=result))
                         runOnUiThread {
-                            val i = Intent(this@ImcActivity,ListCalcActivity::class.java)
-                            i.putExtra("type","imc")
-                            startActivity(i)
+                            openListCalcActivity()
                         }
                     }.start()
                 }
@@ -58,6 +56,11 @@ class ImcActivity : AppCompatActivity() {
             val service = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             service.hideSoftInputFromWindow(currentFocus?.windowToken,0)
         }
+    }
+    private fun openListCalcActivity(){
+        val i = Intent(this@ImcActivity,ListCalcActivity::class.java)
+        i.putExtra("type","imc")
+        startActivity(i)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -67,9 +70,8 @@ class ImcActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId ==R.id.menu_search){
-            val i = Intent(this@ImcActivity,ListCalcActivity::class.java)
-            i.putExtra("type","imc")
-            startActivity(i)
+            finish()
+            openListCalcActivity()
         }
         return super.onOptionsItemSelected(item)
     }

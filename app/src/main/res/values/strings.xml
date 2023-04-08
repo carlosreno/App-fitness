@@ -21,7 +21,7 @@
     <string name="save">Salvar</string>
     <string name="calc_saved">Registro salvo com sucesso</string>
     <string name="calc_removed">Registro removido com sucesso</string>
-    <string name="search">Buscar</string>
+    <string name="search">Resultados Gravados</string>
     <string name="tmb_desc">TMB é o cálculo para descobrir a quantidade calórica que o corpo necessita com base no seu estilo de vida</string>
     <string name="age">Idade</string>
     <string name="tmb_response">Tmb: %1$.2f</string>
@@ -30,4 +30,5 @@
     <string name="label_imc">IMC</string>
     <string name="calculo_DPP">DPP</string>
     <string name="calculo_IG">IG</string>
+    <string name="select_tmb">clice-me |selecione uma opçao</string>
 </resources>

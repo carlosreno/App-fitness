@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         mainItems.addAll(
             listOf(
                 MainItem(1, R.drawable.baseline_wb_sunny_24, R.string.imc, Color.GREEN),
-                MainItem(2, R.drawable.baseline_wc_24, R.string.calculo_DPP, Color.CYAN),
+                MainItem(2, R.drawable.baseline_wc_24, R.string.tmb, Color.CYAN),
                 MainItem(3, R.drawable.baseline_wb_sunny_24, R.string.calculo_IG, Color.GREEN),
                 MainItem(4, R.drawable.baseline_wc_24, R.string.imc, Color.CYAN)
             )
@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
                     startActivity(i)
                 }
                 2 -> {
-                    Log.i("tela 2","tela 2")
+                    val i = Intent(this,TmbActivity::class.java)
+                    startActivity(i)
                 }
                 3 -> {
                     Log.i("tela 3","tela 3")
@@ -82,7 +83,6 @@ class MainActivity : AppCompatActivity() {
                 iconImc.setImageResource(item.drawableId)
                 textView.setText(item.texStringId)
                 container.setBackgroundColor(item.color)
-
                 container.setOnClickListener {
                     onItemClickListener.invoke(item.id)
 

@@ -1,5 +1,7 @@
 package co.tiagoaguiar.fitnesstracker
 
+import co.tiagoaguiar.fitnesstracker.model.Calc
+
 interface OnItemClickListener {
-    fun onClick(id: Int)
+    fun onLongClick(position: Int, calc: Calc): Boolean
 }
